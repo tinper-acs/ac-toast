@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ToastItem from '../toastItem/toastItem';
+import ToastItem from '../toastItem';
 import './index.scss';
 
 class ToastList extends Component{

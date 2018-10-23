@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './toastItem.scss';
+import './index.scss';
 
 const propTypes = {
 	id: PropTypes.string,
