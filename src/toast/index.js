@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ToastList from './toastList';
-import ToastItem from './toastItem/toastItem';
 import classNames from 'classnames';
 import './index.scss';
 

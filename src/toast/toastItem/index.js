@@ -9,7 +9,7 @@ const propTypes = {
 	msg: PropTypes.string,
 	horizontal: PropTypes.oneOf(['left', 'center', 'right']),
 	vertical: PropTypes.oneOf(['top', 'middle', 'bottom']),
-	transition: PropTypes.string,
+	transition: PropTypes.oneOf(['fade','slide-left']),
 	duration: PropTypes.number,
 	mode: PropTypes.string,
 	onClose: PropTypes.func,
@@ -23,7 +23,7 @@ const defaultPropTypes = {
 	transition: 'fade',
 	duration: 3000,
 	num: 0,
-	mode: 'queue'
+	mode: 'queue',
 }
 
 class ToastItem extends Component {
@@ -36,14 +36,18 @@ class ToastItem extends Component {
 	}
 	componentDidMount(){
 		const {duration} = this.props;
+		const animateTime = 300 * 2;
 		setTimeout(() => {
 			this.close();
-		}, duration);
+		}, duration + animateTime);
 	}
 	close(){
-		this.setState({
-			show: false
-		})
+		// this.setState({
+		// 	show: false
+		// })
+		if(this.props.onClose){
+			this.props.onClose(this);
+		}
 	}
 	render() {
 		let {id, msg, horizontal, vertical, duration, className,seq} = this.props;

@@ -12,24 +12,24 @@ class Demo1 extends Component {
     componentDidMount(){
         Toast.info({
             msg: 'toast info',
-            duration: 2000,
-            mode: 'queue'
-        });
-        Toast.info({
-            msg: 'toast info1',
-            duration: 2000,
-            mode: 'queue'
-        });
-        Toast.info({
-            msg: 'toast info2',
-            duration: 2000,
-            mode: 'queue'
-        });
-        Toast.info({
-            msg: 'toast info3',
-            duration: 2000,
+            duration: 3000,
             mode: 'order'
         });
+        // Toast.info({
+        //     msg: 'toast info1',
+        //     duration: 2000,
+        //     mode: 'order'
+        // });
+        // Toast.info({
+        //     msg: 'toast info2',
+        //     duration: 2000,
+        //     mode: 'order'
+        // });
+        // Toast.info({
+        //     msg: 'toast info3',
+        //     duration: 2000,
+        //     mode: 'order'
+        // });
         // Toast.info({
         //     msg: 'toast info4',
         //     duration: 10000
