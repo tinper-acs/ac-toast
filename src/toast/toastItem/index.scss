@@ -75,7 +75,7 @@
     0% {
         transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
-        opacity: .1;
+        opacity: .3;
     }
     50% {
         transform: rotate(180deg);
@@ -85,14 +85,14 @@
     100% {
         transform: rotate(359deg);
         -webkit-transform: rotate(359deg);
-        opacity: .1;
+        opacity: .3;
     }
 }
 @-webkit-keyframes loadingrotate{
     0% {
         transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
-        opacity: .1;
+        opacity: .3;
     }
     50% {
         transform: rotate(180deg);
@@ -102,6 +102,6 @@
     100% {
         transform: rotate(359deg);
         -webkit-transform: rotate(359deg);
-        opacity: .1;
+        opacity: .3;
     }
 }
