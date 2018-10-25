@@ -56,7 +56,7 @@ class ToastItem extends Component {
 		}
 	}
 	render() {
-		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon} = this.props;
+		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon,img} = this.props;
 		let toastClass = classNames('t-con', 't-' + horizontal, 't-' + vertical, className);
 		//排序模式样式
 		let orderStyle = {};
@@ -71,12 +71,13 @@ class ToastItem extends Component {
 		icon = this.fBuildIcon(icon);
 		//文字样式
 		let textClass = classNames('t-text',{
-			't-text-icon': !!icon
+			't-text-icon': !!icon || !!img
 		});
 
 		return (
 			<div id={id} className={toastClass} style={orderStyle}>
 				<div className="t-content">
+					{img ? <img src={img}></img> : ''}
 					{icon ? <i className={icon}></i> : ''}
 					<div className={textClass}>{msg}</div>
 				</div>
