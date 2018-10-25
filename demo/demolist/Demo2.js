@@ -23,7 +23,7 @@ class Demo2 extends Component {
     render () {
         return (
             <div className="demoPadding">
-                <button className="btn" onClick={this.fPopToast}>toast图标示例</button>
+                <button className="btn" onClick={this.fPopToast}>图标</button>
             </div>
         )
     }

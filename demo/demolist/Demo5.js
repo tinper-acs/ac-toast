@@ -1,7 +1,7 @@
 /**
  *
  * @title toast
- * @description toast关闭回调
+ * @description toast loading示例
  *
  */
 
@@ -18,16 +18,13 @@ class Demo4 extends Component {
             duration: 3000,
             mode: 'order',
             transition: 'fade',
-            icon: 'hourglass',
-            onClose: function(){
-                alert('toast close');
-            }
+            icon: 'loading'
         });
     }
     render () {
         return (
             <div className="demoPadding">
-                <button className="btn" onClick={this.fPopToast}>关闭回调</button>
+                <button className="btn" onClick={this.fPopToast}>loading示例</button>
             </div>
         )
     }
