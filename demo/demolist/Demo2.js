@@ -1,6 +1,6 @@
 /**
  *
- * @title 应用组件名称
+ * @title toast
  * @description toast图标示例
  *
  */
@@ -10,6 +10,9 @@ import Toast from '../../src/index';
 
 class Demo2 extends Component {
     componentDidMount(){
+        
+    }
+    fPopToast(){
         Toast.info({
             msg: '提交中...',
             duration: 3000,
@@ -20,10 +23,10 @@ class Demo2 extends Component {
     render () {
         return (
             <div className="demoPadding">
-                Toast info
+                <button className="btn" onClick={this.fPopToast}>toast图标示例</button>
             </div>
         )
     }
 }
 
-export default Demo1;
+export default Demo2;

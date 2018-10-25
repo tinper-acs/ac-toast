@@ -14,4 +14,30 @@
         overflow: hidden;
         background-color: #e0e0e0;
     }
+    .btn{
+        background: rgb(224,224,224);
+        border: none;
+        border-radius: 4px;
+        color: rgb(0,0,0);
+        position: relative;
+        min-width: 72px;
+        padding: 5px 13px;
+        display: inline-block;
+        font-family: "Open Sans", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0;
+        overflow: hidden;
+        will-change: box-shadow, transform;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.57143;
+        vertical-align: middle;
+        color: rgb(255,255,255);
+        background-color: rgb(30,136,229);
+        border: 1px rgb(30,136,229) solid;
+    }
 }
