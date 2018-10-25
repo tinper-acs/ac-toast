@@ -65,4 +65,43 @@
 }
 .icon {
     font-size: 30px !important;
+    display: inline-block;
+}
+.icon-loading{
+    animation: loadingrotate 1.2s linear infinite;
+    -webkit-animation: loadingrotate 1.2s linear infinite;
+}
+@keyframes loadingrotate{
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        opacity: .1;
+    }
+    50% {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        opacity: .1;
+    }
+}
+@-webkit-keyframes loadingrotate{
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        opacity: .1;
+    }
+    50% {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        opacity: .1;
+    }
 }
