@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './index.scss';
+import '../icon/iconfont.css';
 
 const propTypes = {
 	id: PropTypes.string,
@@ -33,6 +34,7 @@ class ToastItem extends Component {
 			show: true
 		}
 		this.close = this.close.bind(this);
+		this.fBuildIcon = this.fBuildIcon.bind(this);
 	}
 	componentDidMount(){
 		const {duration} = this.props;
@@ -41,25 +43,43 @@ class ToastItem extends Component {
 			this.close();
 		}, duration + animateTime);
 	}
+	fBuildIcon(icon){
+		const innerIcons = ['info','success','warning','error','hourglass','loading'];
+		if(innerIcons.indexOf(icon) > -1){
+			return 'icon icon-' + icon;
+		}
+		return icon;
+	}
 	close(){
-		// this.setState({
-		// 	show: false
-		// })
 		if(this.props.onClose){
 			this.props.onClose(this);
 		}
 	}
 	render() {
-		let {id, msg, horizontal, vertical, duration, className,seq} = this.props;
-		let {show} = this.state;
-		let toastClass = classNames('t-con', 't-' + horizontal, 't-' + vertical, className, {
-			't-hide': !show
+		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon} = this.props;
+		let toastClass = classNames('t-con', 't-' + horizontal, 't-' + vertical, className);
+		//排序模式样式
+		let orderStyle = {};
+		if(mode == 'order'){
+			let transform = 100 * seq + 50;
+			orderStyle = {
+				transform: 'translateY(-'+transform+'%)',
+				webKitTransform: 'translateY(-'+transform+'%)'
+			}
+		}
+		//图标样式
+		icon = this.fBuildIcon(icon);
+		//文字样式
+		let textClass = classNames('t-text',{
+			't-text-icon': !!icon
 		});
-		let transform = 100 * seq + 50;
 
 		return (
-			<div id={id} className={toastClass} style={{transform:'translateY(-'+transform+'%)'}}>
-				<span className="t-content">{msg}</span>
+			<div id={id} className={toastClass} style={orderStyle}>
+				<div className="t-content">
+					{icon ? <i className={icon}></i> : ''}
+					<div className={textClass}>{msg}</div>
+				</div>
 			</div>
 		);
 	}

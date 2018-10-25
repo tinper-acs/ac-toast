@@ -10,10 +10,13 @@ import Toast from '../../src/index';
 
 class Demo1 extends Component {
     componentDidMount(){
+        //['info','success','warning','error','hourglass','loading'];
         Toast.info({
             msg: 'toast info',
-            duration: 3000,
-            mode: 'order'
+            duration: 300000,
+            mode: 'order',
+            transition: 'fade',
+            icon: 'loading'
         });
         // Toast.info({
         //     msg: 'toast info1',

@@ -29,7 +29,7 @@ class ToastList extends Component{
 		const toastTransItem =(
 			<CSSTransition
 				key={props.id}
-				timeout={15000}
+				timeout={300}
 				classNames={transition}
 			>
 				{toastItem}
@@ -86,7 +86,6 @@ class ToastList extends Component{
 	}
 	render(){
 		let {toasts} = this.state;
-		console.log(toasts);
 
 		return (
 			<div className="toasts">

@@ -25,9 +25,9 @@ $fadeTime: 300ms;
     -webkit-transition: all $fadeTime ease-out;
 }
 
-$slideTime: 15000ms;
+$slideTime: 300ms;
 .slide-left-enter{
-    left: -100px;
+    left: -200px;
 }
 .slide-left-enter-active{
     left: 0;
@@ -38,7 +38,7 @@ $slideTime: 15000ms;
     left: 0;
 }
 .slide-left-exit-active{
-    left: -100px;
+    left: -200px;
     transition: left $slideTime ease-out;
     -webkit-transition: left $slideTime ease-out;
 }

@@ -1,70 +1,68 @@
 .t-con {
-  color: white;
-  z-index: 9999;
-  width:100%;
+    color: white;
+    z-index: 9999;
+    width: 100%;
+    line-height: 1;
 }
 .t-con {
-  position: fixed;
-  top: 80%;
+    position: fixed;
+    top: 80%;
 }
-.t-hide{
-  display: none;
+.t-hide {
+    display: none;
 }
 .t-content {
-  display:inline-block;
-  max-width: 720px;    
-  background-color: rgba(48, 45, 55, 0.7);
-  border-radius: 10px;
-  padding: 20px 30px;
+    display: inline-block;
+    max-width: 720px;
+    background-color: rgba(48, 45, 55, 0.7);
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.t-text {}
+.t-text-icon{
+    margin-top: 10px;
 }
 .t-con.t-left {
-  text-align: left;
+    text-align: left;
 }
 .t-con.t-right {
-  text-align: right;
+    text-align: right;
 }
 .t-con.t-center {
-  text-align:center;
+    text-align: center;
 }
 .t-con.t-top {
-  top: 0;
-  bottom: auto;
+    top: 0;
+    bottom: auto;
 }
 .t-con.t-bottom {
-  top: auto;
-  bottom: 0;
+    top: auto;
+    bottom: 0;
 }
-.t-con.t-middle{
-  top:50%;
-  transform: translateY(-50%);
+.t-con.t-middle {
+    top: 50%;
+    transform: translateY(-50%);
 }
-.t-con.t-center-middle{
-  top:45%;
-  transform: translate(0,-50%);
-  text-align:center;
+.t-con.t-center-middle {
+    top: 45%;
+    transform: translate(0, -50%);
+    text-align: center;
 }
-// .t-con.t-alert {
-//   background-color: rgba(189, 19, 19, 0.7);
-// }
-// .t-con.t-warn {
-//   background-color: rgba(250, 180 ,90 ,0.9);
-// }
-// .t-con.t-info {
-//   background-color: rgba(32, 83, 201, 0.7);
-// }
-.t-con.t-success .t-content{
-	color: #155724;
+.t-con.t-success .t-content {
+    color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
 }
-.t-con.t-warning .t-content{
-	color: #856404;
+.t-con.t-warning .t-content {
+    color: #856404;
     background-color: #fff3cd;
     border-color: #ffeeba;
 }
-.t-con.t-error .t-content{
-	color: #721c24;
-	background-color: #f8d7da;
-	border-color: #f5c6cb;
+.t-con.t-error .t-content {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }
-
+.icon {
+    font-size: 30px !important;
+}
