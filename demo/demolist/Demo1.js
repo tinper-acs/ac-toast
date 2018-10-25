@@ -12,10 +12,13 @@ class Demo1 extends Component {
     componentDidMount(){
         Toast.info({
             msg: '提交中...',
-            duration: 300000,
+            duration: 3000,
             mode: 'order',
             transition: 'fade',
-            icon: 'hourglass'
+            icon: 'hourglass',
+            onClose: function(){
+                console.log('toast close');
+            }
         });
         // Toast.info({
         //     msg: 'toast info1',

@@ -51,9 +51,9 @@ class ToastItem extends Component {
 		return icon;
 	}
 	close(){
-		if(this.props.onClose){
-			this.props.onClose(this);
-		}
+		const {close,onClose} = this.props;
+		close && close(this);
+		onClose && onClose();
 	}
 	render() {
 		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon,img} = this.props;

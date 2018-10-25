@@ -22,10 +22,9 @@ class ToastList extends Component{
     }
 	add(props){
 		props.id = props.id || this.getUUID();
-		const toastItem = <ToastItem seq={this.toastNum-1} {...props} onClose={this.fToastClose} />;
+		const toastItem = <ToastItem seq={this.toastNum-1} {...props} close={this.fToastClose} />;
 		props = toastItem.props;
 		const transition = props.transition;
-		console.log(transition);
 		const toastTransItem =(
 			<CSSTransition
 				key={props.id}

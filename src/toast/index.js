@@ -19,7 +19,6 @@ let Toast = {
     hasInit: false,
     append(props) {
         if(this.toastList){
-            console.log('111');
             props = this.queue.shift() || props;
             if(props){
                 this.toastList.add(props);
