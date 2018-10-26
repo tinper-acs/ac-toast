@@ -13,13 +13,18 @@ class Demo4 extends Component {
         
     }
     fPopToast(){
+        let id = '1';
         Toast.info({
+            id: id,
             msg: '提交中...',
             duration: 3000,
-            mode: 'order',
             transition: 'fade',
-            icon: 'loading'
+            icon: 'loading',
+            autoClose: false
         });
+        setTimeout(() => {
+            Toast.close(id);
+        },3000);
     }
     render () {
         return (

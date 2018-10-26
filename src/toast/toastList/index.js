@@ -15,14 +15,14 @@ class ToastList extends Component{
 		this.toastNum = 0;
 		this.toasts = [];
 		this.queueTimer = null;
-		this.fToastClose = this.fToastClose.bind(this);
+		this.removeToast = this.removeToast.bind(this);
 	}
 	getUUID(){
         return 't-' + new Date().getTime() + '-' + ++this.toastNum;
     }
 	add(props){
 		props.id = props.id || this.getUUID();
-		const toastItem = <ToastItem seq={this.toastNum-1} {...props} close={this.fToastClose} />;
+		const toastItem = <ToastItem seq={this.toastNum-1} {...props} removeToast={this.removeToast} />;
 		props = toastItem.props;
 		const transition = props.transition;
 		const toastTransItem =(
@@ -77,8 +77,8 @@ class ToastList extends Component{
 			duration += item.props.duration;
 		}
 	}
-	fToastClose(toastItem){
-		this.toasts = this.toasts.filter((item) => item.id != toastItem.id);
+	removeToast(id){
+		this.toasts = this.toasts.filter((item) => item.id != id);
 		this.setState({
 			toasts: this.toasts
 		});

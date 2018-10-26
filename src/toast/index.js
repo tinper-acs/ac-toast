@@ -4,17 +4,17 @@ import ToastList from './toastList';
 import classNames from 'classnames';
 import './index.scss';
 
-let toastc;
-let div = document.createElement('div');
-div.className = 'toastc';
-document.body.appendChild(div);
+let toastList;
+let toastc = document.createElement('div');
+toastc.className = 'toastc';
+document.body.appendChild(toastc);
 //添加参数
 ReactDOM.render(<ToastList ref={(list) => {
-    toastc = list;
-}} />, div);
+    toastList = list;
+}} />, toastc);
 
 let Toast = {
-    toastList: toastc,
+    toastList: toastList,
     queue: [],
     hasInit: false,
     append(props) {
@@ -68,8 +68,12 @@ let Toast = {
         props.className = classNames(props.className,'t-error');
         this.push(props);
     },
-    hide(){
-
+    close(id){
+        this.toastList.removeToast(id);
+    },
+    closeAll(){
+        ReactDOM.unmountComponentAtNode(toastc);
+        document.body.removeChild(toastc);
     }
 }
 

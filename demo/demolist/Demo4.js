@@ -16,7 +16,6 @@ class Demo4 extends Component {
         Toast.info({
             msg: '提交中...',
             duration: 3000,
-            mode: 'order',
             transition: 'fade',
             icon: 'hourglass',
             onClose: function(){

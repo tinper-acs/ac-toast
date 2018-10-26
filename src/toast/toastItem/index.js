@@ -15,7 +15,8 @@ const propTypes = {
 	mode: PropTypes.string,
 	onClose: PropTypes.func,
 	seq: PropTypes.number,
-	mode: PropTypes.oneOf(['override','queue','order'])
+	mode: PropTypes.oneOf(['override','queue','order']),
+	autoClose: PropTypes.bool
 }
 
 const defaultPropTypes = {
@@ -25,6 +26,7 @@ const defaultPropTypes = {
 	duration: 3000,
 	num: 0,
 	mode: 'queue',
+	autoClose: true
 }
 
 class ToastItem extends Component {
@@ -37,11 +39,13 @@ class ToastItem extends Component {
 		this.fBuildIcon = this.fBuildIcon.bind(this);
 	}
 	componentDidMount(){
-		const {duration} = this.props;
-		const animateTime = 300 * 2;
-		setTimeout(() => {
-			this.close();
-		}, duration + animateTime);
+		const {duration,autoClose} = this.props;
+		if(autoClose){
+			const animateTime = 300 * 2;
+			setTimeout(() => {
+				this.close();
+			}, duration + animateTime);
+		}
 	}
 	fBuildIcon(icon){
 		const innerIcons = ['info','success','warning','error','hourglass','loading'];
@@ -51,8 +55,8 @@ class ToastItem extends Component {
 		return icon;
 	}
 	close(){
-		const {close,onClose} = this.props;
-		close && close(this);
+		const {removeToast,onClose} = this.props;
+		removeToast(this.id);
 		onClose && onClose();
 	}
 	render() {
