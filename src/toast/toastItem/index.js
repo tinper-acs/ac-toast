@@ -10,11 +10,13 @@ const propTypes = {
 	msg: PropTypes.string,
 	horizontal: PropTypes.oneOf(['left', 'center', 'right']),
 	vertical: PropTypes.oneOf(['top', 'middle', 'bottom']),
+	//slide-left滑动会抖动
 	transition: PropTypes.oneOf(['fade','slide-left']),
 	duration: PropTypes.number,
 	mode: PropTypes.string,
 	onClose: PropTypes.func,
 	seq: PropTypes.number,
+	//order模式还会重叠
 	mode: PropTypes.oneOf(['override','queue','order']),
 	autoClose: PropTypes.bool
 }
