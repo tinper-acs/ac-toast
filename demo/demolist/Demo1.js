@@ -14,7 +14,7 @@ class Demo1 extends Component {
     fPopToast(){
         Toast.info({
             msg: '提交中...',
-            duration: 3000,
+            duration: 300000,
             mode: 'order',
             transition: 'fade',
             icon: 'hourglass',
@@ -22,21 +22,21 @@ class Demo1 extends Component {
                 console.log('toast close');
             }
         });
-        // Toast.info({
-        //     msg: 'toast info1',
-        //     duration: 2000,
-        //     mode: 'order'
-        // });
-        // Toast.info({
-        //     msg: 'toast info2',
-        //     duration: 2000,
-        //     mode: 'order'
-        // });
-        // Toast.info({
-        //     msg: 'toast info3',
-        //     duration: 2000,
-        //     mode: 'order'
-        // });
+        Toast.info({
+            msg: 'toast info1',
+            duration: 200000,
+            mode: 'order'
+        });
+        Toast.info({
+            msg: 'toast info2',
+            duration: 200000,
+            mode: 'order'
+        });
+        Toast.info({
+            msg: 'toast info3',
+            duration: 200000,
+            mode: 'order'
+        });
         // Toast.info({
         //     msg: 'toast info4',
         //     duration: 10000

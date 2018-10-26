@@ -22,7 +22,7 @@ class ToastList extends Component{
     }
 	add(props){
 		props.id = props.id || this.getUUID();
-		const toastItem = <ToastItem seq={this.toastNum-1} {...props} removeToast={this.removeToast} />;
+		const toastItem = <ToastItem seq={this.toasts.length} {...props} removeToast={this.removeToast} />;
 		props = toastItem.props;
 		const transition = props.transition;
 		const toastTransItem =(
@@ -49,7 +49,6 @@ class ToastList extends Component{
 			case 'order':
 				clearTimeout(this.queueTimer);
 				this.toasts.push(toastTransItem);
-				console.log(this.toasts);
 				this.setState({
 					toasts: this.toasts
 				})
