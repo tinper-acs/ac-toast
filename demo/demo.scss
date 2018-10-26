@@ -36,8 +36,19 @@
         text-align: center;
         line-height: 1.57143;
         vertical-align: middle;
-        color: rgb(255,255,255);
-        background-color: rgb(30,136,229);
-        border: 1px rgb(30,136,229) solid;
     }
+    .btn2{
+        margin-left: 20px;
+    }
+}
+.submiting{
+    width: 230px;
+    height: 107px;
+    padding-top: 26px !important;
+}
+.submit-success{
+    width: 230px;
+    height: 107px;
+    background-color:#91C08F !important;
+    padding-top: 26px !important;
 }

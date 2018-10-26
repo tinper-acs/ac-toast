@@ -17,13 +17,24 @@ class Demo2 extends Component {
             msg: '提交中...',
             duration: 3000,
             transition: 'fade',
-            icon: 'hourglass'
+            icon: 'hourglass',
+            className: 'submiting'
+        });
+    }
+    fPopToast1(){
+        Toast.info({
+            msg: '提交成功',
+            duration: 3000,
+            transition: 'fade',
+            icon: 'success',
+            className: 'submit-success'
         });
     }
     render () {
         return (
             <div className="demoPadding">
-                <button className="btn" onClick={this.fPopToast}>图标</button>
+                <button className="btn" onClick={this.fPopToast}>提交中</button>
+                <button className="btn btn2" onClick={this.fPopToast1}>提交成功</button>
             </div>
         )
     }
