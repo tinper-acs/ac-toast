@@ -5,37 +5,30 @@ import classNames from 'classnames';
 import './index.scss';
 
 let toastList;
-let toastc = document.createElement('div');
-toastc.className = 'toastc';
-document.body.appendChild(toastc);
-//添加参数
-ReactDOM.render(<ToastList ref={(list) => {
-    toastList = list;
-}} />, toastc);
+let toastc;
+let lock = false;
 
 let Toast = {
-    toastList: toastList,
     queue: [],
-    hasInit: false,
     append(props) {
-        if(this.toastList){
+        if(toastList){
             props = this.queue.shift() || props;
             if(props){
-                this.toastList.add(props);
+                toastList.add(props);
             }
         }
         else{
-            // if(!this.hasInit){
-            //     this.hasInit = true;
-            //     let div = document.createElement('div');
-            //     div.className = 'toastc';
-            //     document.body.appendChild(div);
-            //     //添加参数
-            //     ReactDOM.render(<ToastList {...props} ref={(list) => {
-            //         this.toastList = list;
-            //         this.consume();
-            //     }} />, div);
-            // }
+            if(!lock){
+                lock = true;
+                toastc = document.createElement('div');
+                toastc.className = 'toastc';
+                document.body.appendChild(toastc);
+                //添加参数
+                ReactDOM.render(<ToastList ref={(list) => {
+                    toastList = list;
+                    this.consume();
+                }} />, toastc);
+            }
         }
     },
     consume(){
