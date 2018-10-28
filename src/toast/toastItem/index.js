@@ -25,7 +25,7 @@ const defaultPropTypes = {
 	horizontal: 'center',
 	vertical: 'middle',
 	transition: 'fade',
-	duration: 3000,
+	duration: 2000,
 	num: 0,
 	mode: 'override',
 	autoClose: true
