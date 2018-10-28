@@ -9,9 +9,6 @@ import React, { Component } from 'react';
 import Toast from '../../src/index';
 
 class Demo3 extends Component {
-    componentDidMount(){
-        
-    }
     fPopToast(){
         Toast.info({
             msg: '迎客松',

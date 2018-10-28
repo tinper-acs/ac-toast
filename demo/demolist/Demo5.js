@@ -9,9 +9,6 @@ import React, { Component } from 'react';
 import Toast from '../../src/index';
 
 class Demo4 extends Component {
-    componentDidMount(){
-        
-    }
     fPopToast(){
         let id = '1';
         Toast.info({

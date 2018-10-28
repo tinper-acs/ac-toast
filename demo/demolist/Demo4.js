@@ -9,17 +9,16 @@ import React, { Component } from 'react';
 import Toast from '../../src/index';
 
 class Demo4 extends Component {
-    componentDidMount(){
-        
-    }
     fPopToast(){
         Toast.info({
             msg: '提交中...',
-            duration: 3000,
+            duration: 2000,
             transition: 'fade',
             icon: 'hourglass',
             onClose: function(){
-                alert('toast close');
+                Toast.info({
+                    msg: '提交完成'
+                })
             }
         });
     }

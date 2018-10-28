@@ -27,7 +27,7 @@ const defaultPropTypes = {
 	transition: 'fade',
 	duration: 3000,
 	num: 0,
-	mode: 'queue',
+	mode: 'override',
 	autoClose: true
 }
 
@@ -62,7 +62,8 @@ class ToastItem extends Component {
 		onClose && onClose();
 	}
 	render() {
-		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon,img} = this.props;
+		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon, img} = this.props;
+		//toast容器样式
 		let toastClass = classNames('t-con', 't-' + horizontal, 't-' + vertical);
 		//排序模式样式
 		let orderStyle = {};

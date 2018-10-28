@@ -48,17 +48,17 @@
     transform: translate(0, -50%);
     text-align: center;
 }
-.t-con.t-success .t-content {
+.t-content.t-success{
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
 }
-.t-con.t-warning .t-content {
+.t-content.t-warning{
     color: #856404;
     background-color: #fff3cd;
     border-color: #ffeeba;
 }
-.t-con.t-error .t-content {
+.t-content.t-error{
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
