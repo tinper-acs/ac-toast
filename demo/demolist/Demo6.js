@@ -18,7 +18,7 @@ class Demo4 extends Component {
         const msg = map[type];
         Toast[type]({
             msg: '提交信息',
-            duration: 300000,
+            duration: 3000,
             transition: 'fade',
             icon: type
         });
