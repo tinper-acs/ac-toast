@@ -13,7 +13,7 @@ class Demo3 extends Component {
         Toast.info({
             msg: '迎客松',
             duration: 3000,
-            mode: 'order',
+            mode: 'queue',
             transition: 'fade',
             img: 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3189276298,1072963024&fm=58'
         });
