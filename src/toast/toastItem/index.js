@@ -57,8 +57,8 @@ class ToastItem extends Component {
 		return icon;
 	}
 	close(){
-		const {removeToast,onClose} = this.props;
-		removeToast(this.id);
+		const {removeToast,onClose,id} = this.props;
+		removeToast(this.props);
 		onClose && onClose();
 	}
 	render() {

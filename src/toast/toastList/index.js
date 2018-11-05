@@ -67,20 +67,31 @@ class ToastList extends Component{
 		let duration = 0;
 		let queue = this.toasts;
 		let item;
+		const animateTime = 300;
 		while(item = queue.shift()){
 			setTimeout((item) => {
+				this.toasts = [item];
 				this.setState({
-					toasts: [item]
+					toasts: this.toasts
 				});
 			},duration,item)
-			duration += item.props.duration;
+			duration += item.props.children.props.duration + animateTime;
+			setTimeout((item) => {
+				this.toasts = [];
+				this.setState({
+					toasts: this.toasts
+				});
+			},duration,item)
+			duration += animateTime;
 		}
 	}
-	removeToast(id){
-		this.toasts = this.toasts.filter((item) => item.id != id);
-		this.setState({
-			toasts: this.toasts
-		});
+	removeToast(props){
+		if(props.mode != 'queue'){
+			this.toasts = this.toasts.filter((item) => item.id != props.id);
+			this.setState({
+				toasts: this.toasts
+			});
+		}
 	}
 	render(){
 		let {toasts} = this.state;

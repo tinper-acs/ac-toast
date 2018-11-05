@@ -62,7 +62,7 @@ let Toast = {
         this.push(props);
     },
     close(id){
-        this.toastList.removeToast(id);
+        toastList.removeToast({id:id});
     },
     closeAll(){
         ReactDOM.unmountComponentAtNode(toastc);
