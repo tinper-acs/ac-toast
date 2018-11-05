@@ -38,15 +38,16 @@ class ToastList extends Component{
 			//强行冲掉前面的，只显示它自己
 			case 'override':
 				clearTimeout(this.queueTimer);
+				this.toasts = [toastTransItem];
 				this.setState({
-					toasts: [toastTransItem]
+					toasts: this.toasts
 				})
 				break;
 			case 'queue':
 				this.toasts.push(toastTransItem);
 				this.consumeDebounce();
 				break;
-			case 'order':
+			case 'layout':
 				clearTimeout(this.queueTimer);
 				this.toasts.push(toastTransItem);
 				this.setState({
@@ -87,7 +88,7 @@ class ToastList extends Component{
 	}
 	removeToast(props){
 		if(props.mode != 'queue'){
-			this.toasts = this.toasts.filter((item) => item.id != props.id);
+			this.toasts = this.toasts.filter((item) => item.key != props.id);
 			this.setState({
 				toasts: this.toasts
 			});

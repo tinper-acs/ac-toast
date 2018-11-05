@@ -17,7 +17,7 @@ const propTypes = {
 	onClose: PropTypes.func,
 	seq: PropTypes.number,
 	//order模式还会重叠
-	mode: PropTypes.oneOf(['override','queue','order']),
+	mode: PropTypes.oneOf(['override','queue','layout']),
 	autoClose: PropTypes.bool
 }
 
@@ -67,7 +67,7 @@ class ToastItem extends Component {
 		let toastClass = classNames('t-con', 't-' + horizontal, 't-' + vertical);
 		//排序模式样式
 		let orderStyle = {};
-		if(mode == 'order'){
+		if(mode == 'layout'){
 			let transform = 100 * seq + 50;
 			orderStyle = {
 				transform: 'translateY(-'+transform+'%)',

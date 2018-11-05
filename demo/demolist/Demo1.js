@@ -12,6 +12,7 @@ class Demo1 extends Component {
     fPopToast(){
         Toast.info({
             msg: '消息提示',
+            mode: 'layout',
             duration: 3000,
             transition: 'fade'
         });
