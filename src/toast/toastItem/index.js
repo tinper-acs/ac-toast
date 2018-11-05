@@ -68,7 +68,7 @@ class ToastItem extends Component {
 		//排序模式样式
 		let orderStyle = {};
 		if(mode == 'layout'){
-			let transform = 100 * seq + 50;
+			let transform = 100 * seq + 50 + 1;
 			orderStyle = {
 				transform: 'translateY(-'+transform+'%)',
 				webKitTransform: 'translateY(-'+transform+'%)'
