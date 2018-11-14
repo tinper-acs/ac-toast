@@ -10,7 +10,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const baseConfig = require('./webpack.base');
 
-const cssFileName = 'bee-toast.css';
+const cssFileName = 'ac-toast.css';
 
 module.exports = webpackMerge(baseConfig, {
   mode:'production',

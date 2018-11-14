@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
+    <title>bee-toast</title>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
@@ -14,9 +14,148 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-2"><a href="#bee-toast">bee-toast</a></li>
+    <li class="sidebar-header-3"><a href="#1.-简介">1. 简介</a></li>
+    <li class="sidebar-header-3"><a href="#2.-安装">2. 安装</a></li>
+    <li class="sidebar-header-3"><a href="#3.-使用">3. 使用</a></li>
+    <li class="sidebar-header-3"><a href="#4.-参数">4. 参数</a></li>
+    <li class="sidebar-header-3"><a href="#5.-方法">5. 方法</a></li>
 </ul>
       </div>
-      <div class="span9 main"><p>### </p>
+      <div class="span9 main"><h2 id="bee-toast">bee-toast</h2>
+<h3 id="1.-简介">1. 简介</h3>
+<p>一个基于react的提示组件，可以弹出文字，图片，图标，以及显示loading</p>
+<h3 id="2.-安装">2. 安装</h3>
+<h3 id="3.-使用">3. 使用</h3>
+<pre class="hljs"><code>Toast.info({
+    <span class="hljs-attr">msg</span>: <span class="hljs-string">'提交成功'</span>,
+    <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>,
+    <span class="hljs-attr">transition</span>: <span class="hljs-string">'fade'</span>,
+    <span class="hljs-attr">icon</span>: <span class="hljs-string">'success'</span>,
+    <span class="hljs-attr">className</span>: <span class="hljs-string">'submit-success'</span>
+});</code></pre><p>更多用法可以参考<a href="./demo/demolist">demo</a>文件夹中的示例</p>
+<h3 id="4.-参数">4. 参数</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>string</code></td>
+<td>a random string</td>
+<td>the toast&#39;s id</td>
+</tr>
+<tr>
+<td>msg</td>
+<td><code>string</code></td>
+<td></td>
+<td>the message showed in toast</td>
+</tr>
+<tr>
+<td>className</td>
+<td><code>string</code></td>
+<td></td>
+<td>a custom class for toast</td>
+</tr>
+<tr>
+<td>horizontal</td>
+<td><code>string</code></td>
+<td><code>center</code></td>
+<td>Position horizontal of toast. There are 3 pre-defined positions: <code>center</code>,<code>left</code>,<code>right</code></td>
+</tr>
+<tr>
+<td>vertical</td>
+<td><code>string</code></td>
+<td><code>middle</code></td>
+<td>Position vertical of toast. There are 3 pre-defined positions: <code>middle</code>,<code>top</code>,<code>bottom</code></td>
+</tr>
+<tr>
+<td>duration</td>
+<td><code>number</code></td>
+<td>2000</td>
+<td>how long time the toast show,unit is milliscond</td>
+</tr>
+<tr>
+<td>mode</td>
+<td><code>string</code></td>
+<td><code>override</code></td>
+<td>Built-in modes: <code>override</code>,<code>queue</code>. If <code>override</code>, the last toast will forcibly flush previous. If <code>queue</code>, toast will show after last hide</td>
+</tr>
+<tr>
+<td>transition</td>
+<td><code>string</code></td>
+<td><code>fade</code></td>
+<td>Built-in transitions: <code>fade</code></td>
+</tr>
+<tr>
+<td>zIndex</td>
+<td><code>number</code></td>
+<td>9999</td>
+<td>toast container&#39;s z-index in css</td>
+</tr>
+<tr>
+<td>onClose</td>
+<td><code>function</code></td>
+<td></td>
+<td>the callback function after toast hide</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5.-方法">5. 方法</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Parameter</th>
+<th>return Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>info</td>
+<td>above</td>
+<td></td>
+<td>pop up message with black background</td>
+</tr>
+<tr>
+<td>success</td>
+<td>above</td>
+<td></td>
+<td>pop up message with green background</td>
+</tr>
+<tr>
+<td>warning</td>
+<td>above</td>
+<td></td>
+<td>pop up message with yelllow background</td>
+</tr>
+<tr>
+<td>error</td>
+<td>above</td>
+<td></td>
+<td>pop up message with red background</td>
+</tr>
+<tr>
+<td>close</td>
+<td>id：toast&#39;s id</td>
+<td></td>
+<td>close specificed toast</td>
+</tr>
+<tr>
+<td>closeAll</td>
+<td></td>
+<td></td>
+<td>close all toast</td>
+</tr>
+</tbody>
+</table>
       </div>
     </div>
   </div>
