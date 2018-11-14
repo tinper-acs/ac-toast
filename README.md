@@ -12,6 +12,7 @@ vertical | `string` | `middle` | Position vertical of toast. There are 3 pre-def
 duration | `number` | 2000 | how long time the toast show,unit is milliscond
 mode | `string` | `override` | Built-in modes: `override`,`queue`. If `override`, the last toast will forcibly flush previous. If `queue`, toast will show after last hide
 transition | `string` | `fade` | Built-in transitions: `fade`
+zIndex | `number`  |  9999  |  toast container's z-index in css
 onClose | `function` |  | the callback function after toast hide
 
 ### Methods
