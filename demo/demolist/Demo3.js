@@ -15,7 +15,8 @@ class Demo3 extends Component {
             duration: 3000,
             mode: 'queue',
             transition: 'fade',
-            img: 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3189276298,1072963024&fm=58'
+            img: 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3189276298,1072963024&fm=58',
+            zIndex: 8888
         });
     }
     render () {

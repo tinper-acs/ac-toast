@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './index.scss';
 import '../icon/iconfont.css';
+import {assign} from '../common';
 
 //添加zIndex支持 TODO
 const propTypes = {
@@ -19,7 +20,8 @@ const propTypes = {
 	seq: PropTypes.number,
 	//layout模式还会重叠
 	mode: PropTypes.oneOf(['override','queue','layout']),
-	autoClose: PropTypes.bool
+	autoClose: PropTypes.bool,
+	zIndex: PropTypes.number
 }
 
 const defaultPropTypes = {
@@ -29,7 +31,8 @@ const defaultPropTypes = {
 	duration: 2000,
 	num: 0,
 	mode: 'override',
-	autoClose: true
+	autoClose: true,
+	zIndex: 9999
 }
 
 class ToastItem extends Component {
@@ -63,17 +66,20 @@ class ToastItem extends Component {
 		onClose && onClose();
 	}
 	render() {
-		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon, img} = this.props;
+		let {id, msg, horizontal, vertical, duration, className, seq, transition, mode, icon, img, zIndex} = this.props;
 		//toast容器样式
 		let toastClass = classNames('t-con', 't-' + horizontal, 't-' + vertical);
+		//toast样式
+		let toastStyle = {};
+		//zIndex
+		toastStyle.zIndex = zIndex;
 		//排序模式样式
-		let orderStyle = {};
 		if(mode == 'layout'){
 			let transform = 100 * seq + 50 + 1;
-			orderStyle = {
+			assign(toastStyle,{
 				transform: 'translateY(-'+transform+'%)',
 				webKitTransform: 'translateY(-'+transform+'%)'
-			}
+			});
 		}
 		//图标样式
 		icon = this.fBuildIcon(icon);
@@ -85,7 +91,7 @@ class ToastItem extends Component {
 		});
 
 		return (
-			<div id={id} className={toastClass} style={orderStyle}>
+			<div id={id} className={toastClass} style={toastStyle}>
 				<div className={textConClass}>
 					{img ? <img src={img}></img> : ''}
 					{icon ? <i className={icon}></i> : ''}
