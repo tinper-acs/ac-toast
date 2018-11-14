@@ -35,14 +35,6 @@ class ToastList extends Component{
 			</CSSTransition>
 		);
 		switch(props.mode){
-			//强行冲掉前面的，只显示它自己
-			case 'override':
-				clearTimeout(this.queueTimer);
-				this.toasts = [toastTransItem];
-				this.setState({
-					toasts: this.toasts
-				})
-				break;
 			case 'queue':
 				this.toasts.push(toastTransItem);
 				this.consumeDebounce();
@@ -54,7 +46,13 @@ class ToastList extends Component{
 					toasts: this.toasts
 				})
 				break;
+			//override 强行冲掉前面的，只显示它自己
 			default:
+				clearTimeout(this.queueTimer);
+				this.toasts = [toastTransItem];
+				this.setState({
+					toasts: this.toasts
+				})
 				break;
 		}
 	}

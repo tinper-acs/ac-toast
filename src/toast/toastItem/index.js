@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import './index.scss';
 import '../icon/iconfont.css';
 
+//添加zIndex支持 TODO
 const propTypes = {
 	id: PropTypes.string,
 	className: PropTypes.string,
@@ -16,7 +17,7 @@ const propTypes = {
 	mode: PropTypes.string,
 	onClose: PropTypes.func,
 	seq: PropTypes.number,
-	//order模式还会重叠
+	//layout模式还会重叠
 	mode: PropTypes.oneOf(['override','queue','layout']),
 	autoClose: PropTypes.bool
 }
