@@ -1,6 +1,25 @@
-a react toast component
+## bee-toast
 
-### Params
+### 1. 简介
+
+一个基于react的提示组件，可以弹出文字，图片，图标，以及显示loading
+
+### 2. 安装
+
+### 3. 使用
+
+```javascript
+Toast.info({
+    msg: '提交成功',
+    duration: 3000,
+    transition: 'fade',
+    icon: 'success',
+    className: 'submit-success'
+});
+```
+更多用法可以参考[demo](./demo)文件夹中的示例
+
+### 4. 参数
 
 Parameter | Type |Default| Description
 --------- | ---- | ------|-----------
@@ -15,7 +34,7 @@ transition | `string` | `fade` | Built-in transitions: `fade`
 zIndex | `number`  |  9999  |  toast container's z-index in css
 onClose | `function` |  | the callback function after toast hide
 
-### Methods
+### 5. 方法
 
 Name | Parameter | return Value | Description
 --------- | ---------- | -----------|-----------
