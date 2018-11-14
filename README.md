@@ -17,7 +17,7 @@ Toast.info({
     className: 'submit-success'
 });
 ```
-更多用法可以参考[demo](./demo)文件夹中的示例
+更多用法可以参考[demo](./demo/demolist)文件夹中的示例
 
 ### 4. 参数
 
