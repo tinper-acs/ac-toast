@@ -6,7 +6,15 @@
 
 ### 2. 安装
 
+```bash
+npm install ac-toast -S
+```
+
 ### 3. 使用
+```javascript
+import Toast from 'ac-toast';
+import 'ac-toast/dist/acc-toast.css';
+```
 
 ```javascript
 Toast.info({
