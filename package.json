@@ -1,7 +1,7 @@
 {
   "name": "toast",
   "version": "0.0.1",
-  "description": "",
+  "description": "react toast component",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,14 +15,17 @@
     "deploy": "npm run clear:gh-pages && webpack --config config/webpack.config.ghpages.js"
   },
   "bugs": {
-    "url": "https://github.com/tinper-acs/toast/issues"
+    "url": "https://github.com/ygtzz/bee-toast/issues"
   },
-  "homepage": "https://github.com/tinper-acs/toast#readme",
+  "homepage": "https://github.com/ygtzz/bee-toast#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinper-acs/toast.git"
+    "url": "git+https://github.com/ygtzz/bee-toast.git"
   },
-  "author": "",
+  "author": {
+    "name": "mengwei",
+    "emial": "mengweif@yonyou.com"
+  },
   "license": "MIT",
   "files": [
     "package.json",
