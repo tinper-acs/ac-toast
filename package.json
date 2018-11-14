@@ -1,5 +1,5 @@
 {
-  "name": "toast",
+  "name": "@yonyou/ac-toast",
   "version": "0.0.1",
   "description": "react toast component",
   "main": "dist/index.js",
@@ -15,12 +15,12 @@
     "deploy": "npm run clear:gh-pages && webpack --config config/webpack.config.ghpages.js"
   },
   "bugs": {
-    "url": "https://github.com/ygtzz/bee-toast/issues"
+    "url": "https://github.com/ygtzz/ac-toast/issues"
   },
-  "homepage": "https://github.com/ygtzz/bee-toast#readme",
+  "homepage": "https://github.com/ygtzz/ac-toast#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ygtzz/bee-toast.git"
+    "url": "git+https://github.com/ygtzz/ac-toast.git"
   },
   "author": {
     "name": "mengwei",
