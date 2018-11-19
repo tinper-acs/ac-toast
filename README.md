@@ -1,5 +1,8 @@
 ## ac-toast
 
+[![npm version](https://img.shields.io/npm/v/ac-toast.svg)](https://www.npmjs.com/package/ac-toast)
+[![NPM downloads](http://img.shields.io/npm/dt/ac-toast.svg?style=flat)](https://npmjs.org/package/ac-toast)
+
 ### 1. 简介
 
 一个基于react的提示组件，可以弹出文字，图片，图标，以及显示loading
