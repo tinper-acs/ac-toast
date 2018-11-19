@@ -8,7 +8,7 @@
 import React, { Component } from 'react';
 import Toast from '../../src/index';
 
-class Demo4 extends Component {
+class Demo6 extends Component {
     fPopToast(type){
         const map = {
             success: '提交成功',
@@ -34,4 +34,4 @@ class Demo4 extends Component {
     }
 }
 
-export default Demo4;
+export default Demo6;
