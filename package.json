@@ -1,6 +1,6 @@
 {
   "name": "ac-toast",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react toast component",
   "main": "dist/index.js",
   "scripts": {
@@ -15,12 +15,12 @@
     "deploy": "npm run clear:gh-pages && webpack --config config/webpack.config.ghpages.js"
   },
   "bugs": {
-    "url": "https://github.com/ygtzz/ac-toast/issues"
+    "url": "https://github.com/tinper-acs/ac-toast/issues"
   },
-  "homepage": "https://github.com/ygtzz/ac-toast#readme",
+  "homepage": "https://github.com/tinper-acs/ac-toast#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ygtzz/ac-toast.git"
+    "url": "git+https://github.com/tinper-acs/ac-toast.git"
   },
   "author": {
     "name": "mengwei",
