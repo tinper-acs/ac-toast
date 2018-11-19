@@ -28,15 +28,15 @@ Toast.info({
     className: 'submit-success'
 });
 ```
-更多用法可以参考[demo](./demo/demolist)文件夹中的示例\
+更多用法可以参考[demo](./demo/demolist)文件夹中的示例
 
 ### 4. 预览
 
-![基本消息](preview/toast-basic.png)
-![图标颜色](preview/toast-submit-success.png)
-![图片](preview/toast-picture.png)
-![loading](preview/toast-loading.png)
-![错误消息](preview/toast-error.png)
+![基本消息](/preview/toast-basic.png)
+![图标颜色](/preview/toast-submit-success.png)
+![图片](/preview/toast-picture.png)
+![loading](/preview/toast-loading.png)
+![错误消息](/preview/toast-error.png)
 
 ### 5. 参数
 
