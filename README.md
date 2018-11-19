@@ -16,7 +16,7 @@ npm install ac-toast -S
 ### 3. 使用
 ```javascript
 import Toast from 'ac-toast';
-import 'ac-toast/dist/acc-toast.css';
+import 'ac-toast/dist/ac-toast.css';
 ```
 
 ```javascript
@@ -28,9 +28,17 @@ Toast.info({
     className: 'submit-success'
 });
 ```
-更多用法可以参考[demo](./demo/demolist)文件夹中的示例
+更多用法可以参考[demo](./demo/demolist)文件夹中的示例\
 
-### 4. 参数
+### 4. 预览
+
+![基本消息](preview/toast-basic.png)
+![图标颜色](preview/toast-submit-success.png)
+![图片](preview/toast-picture.png)
+![loading](preview/toast-loading.png)
+![错误消息](preview/toast-error.png)
+
+### 5. 参数
 
 Parameter | Type |Default| Description
 --------- | ---- | ------|-----------
@@ -45,7 +53,7 @@ transition | `string` | `fade` | Built-in transitions: `fade`
 zIndex | `number`  |  9999  |  toast container's z-index in css
 onClose | `function` |  | the callback function after toast hide
 
-### 5. 方法
+### 6. 方法
 
 Name | Parameter | return Value | Description
 --------- | ---------- | -----------|-----------
