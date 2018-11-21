@@ -14,7 +14,6 @@ class Demo4 extends Component {
         Toast.info({
             id: id,
             msg: '提交中...',
-            duration: 3000,
             transition: 'fade',
             icon: 'loading',
             autoClose: false
