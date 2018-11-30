@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>bee-toast</title>
+    <title>ac-toast</title>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
@@ -14,27 +14,37 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
-    <li class="sidebar-header-2"><a href="#bee-toast">bee-toast</a></li>
+    <li class="sidebar-header-2"><a href="#ac-toast">ac-toast</a></li>
     <li class="sidebar-header-3"><a href="#1.-简介">1. 简介</a></li>
     <li class="sidebar-header-3"><a href="#2.-安装">2. 安装</a></li>
     <li class="sidebar-header-3"><a href="#3.-使用">3. 使用</a></li>
-    <li class="sidebar-header-3"><a href="#4.-参数">4. 参数</a></li>
-    <li class="sidebar-header-3"><a href="#5.-方法">5. 方法</a></li>
+    <li class="sidebar-header-3"><a href="#4.-预览">4. 预览</a></li>
+    <li class="sidebar-header-3"><a href="#5.-参数">5. 参数</a></li>
+    <li class="sidebar-header-3"><a href="#6.-方法">6. 方法</a></li>
 </ul>
       </div>
-      <div class="span9 main"><h2 id="bee-toast">bee-toast</h2>
+      <div class="span9 main"><h2 id="ac-toast">ac-toast</h2>
+<p><a href="https://www.npmjs.com/package/ac-toast"><img src="https://img.shields.io/npm/v/ac-toast.svg" alt="npm version"></a>
+<a href="https://npmjs.org/package/ac-toast"><img src="http://img.shields.io/npm/dt/ac-toast.svg?style=flat" alt="NPM downloads"></a></p>
 <h3 id="1.-简介">1. 简介</h3>
 <p>一个基于react的提示组件，可以弹出文字，图片，图标，以及显示loading</p>
 <h3 id="2.-安装">2. 安装</h3>
-<h3 id="3.-使用">3. 使用</h3>
-<pre class="hljs"><code>Toast.info({
+<pre class="hljs"><code>npm install ac-toast -S</code></pre><h3 id="3.-使用">3. 使用</h3>
+<pre class="hljs"><code><span class="hljs-keyword">import</span> Toast <span class="hljs-keyword">from</span> <span class="hljs-string">'ac-toast'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'ac-toast/dist/ac-toast.css'</span>;</code></pre><pre class="hljs"><code>Toast.info({
     <span class="hljs-attr">msg</span>: <span class="hljs-string">'提交成功'</span>,
     <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>,
     <span class="hljs-attr">transition</span>: <span class="hljs-string">'fade'</span>,
     <span class="hljs-attr">icon</span>: <span class="hljs-string">'success'</span>,
     <span class="hljs-attr">className</span>: <span class="hljs-string">'submit-success'</span>
 });</code></pre><p>更多用法可以参考<a href="./demo/demolist">demo</a>文件夹中的示例</p>
-<h3 id="4.-参数">4. 参数</h3>
+<h3 id="4.-预览">4. 预览</h3>
+<p><img src="/preview/toast-basic.png" alt="基本消息">
+<img src="/preview/toast-submit-success.png" alt="图标颜色">
+<img src="/preview/toast-picture.png" alt="图片">
+<img src="/preview/toast-loading.png" alt="loading">
+<img src="/preview/toast-error.png" alt="错误消息"></p>
+<h3 id="5.-参数">5. 参数</h3>
 <table>
 <thead>
 <tr>
@@ -107,7 +117,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="5.-方法">5. 方法</h3>
+<h3 id="6.-方法">6. 方法</h3>
 <table>
 <thead>
 <tr>
