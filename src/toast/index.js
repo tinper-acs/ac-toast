@@ -62,11 +62,18 @@ let Toast = {
         this.push(props);
     },
     close(id){
-        toastList.removeToast({id:id});
+        if(toastList){
+            toastList.removeToast({id:id});
+        }
     },
     closeAll(){
-        ReactDOM.unmountComponentAtNode(toastc);
-        document.body.removeChild(toastc);
+        if(toastc){
+            ReactDOM.unmountComponentAtNode(toastc);
+            document.body.removeChild(toastc);
+            toastList = null;
+            toastc = null;
+            lock = false;
+        }
     }
 }
 

@@ -41,6 +41,7 @@ class ToastItem extends Component {
 		this.state = {
 			show: true
 		}
+		this.closeTimer = null;
 		this.close = this.close.bind(this);
 		this.fBuildIcon = this.fBuildIcon.bind(this);
 	}
@@ -52,6 +53,11 @@ class ToastItem extends Component {
 				this.close();
 			}, duration + animateTime);
 		}
+	}
+	componentWillMount(){
+		//清除定时器
+		clearTimeout(this.closeTimer);
+		this.closeTimer = null;
 	}
 	fBuildIcon(icon){
 		const innerIcons = ['info','success','warning','error','hourglass','loading'];

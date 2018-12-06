@@ -11,11 +11,16 @@ class ToastList extends Component{
 		super(props);
 		this.state = {
 			toasts: []
-		};
+		};			
 		this.toastNum = 0;
 		this.toasts = [];
 		this.queueTimer = null;
 		this.removeToast = this.removeToast.bind(this);
+	}
+	componentWillMount(){
+		//清除定时器
+		clearTimeout(this.queueTimer);
+		this.queueTimer = null;
 	}
 	getUUID(){
         return 't-' + new Date().getTime() + '-' + ++this.toastNum;
@@ -85,11 +90,13 @@ class ToastList extends Component{
 		}
 	}
 	removeToast(props){
-		if(props.mode != 'queue'){
-			this.toasts = this.toasts.filter((item) => item.key != props.id);
-			this.setState({
-				toasts: this.toasts
-			});
+		if(this && this.toasts){
+			if(props.mode != 'queue'){
+				this.toasts = this.toasts.filter((item) => item.key != props.id);
+				this.setState({
+					toasts: this.toasts
+				});
+			}
 		}
 	}
 	render(){
