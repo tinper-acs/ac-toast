@@ -42,24 +42,24 @@ Toast.info({
 
 Parameter | Type |Default| Description
 --------- | ---- | ------|-----------
-id | `string` | a random string | the toast's id
-msg | `string` |  | the message showed in toast
-className | `string` | | a custom class for toast
-horizontal | `string` | `center` | Position horizontal of toast. There are 3 pre-defined positions: `center`,`left`,`right`
-vertical | `string` | `middle` | Position vertical of toast. There are 3 pre-defined positions: `middle`,`top`,`bottom`
-duration | `number` | 2000 | how long time the toast show,unit is milliscond
-mode | `string` | `override` | Built-in modes: `override`,`queue`. If `override`, the last toast will forcibly flush previous. If `queue`, toast will show after last hide
-transition | `string` | `fade` | Built-in transitions: `fade`
-zIndex | `number`  |  9999  |  toast container's z-index in css
-onClose | `function` |  | the callback function after toast hide
+id | `string` | 随机字符串 | toast组件的id
+msg | `string` |  | 组件中显示的文字
+className | `string` | | 组件顶层的class，用来自定义样式
+horizontal | `string` | `center` | 组件的水平位置。有3个预置选项: `center`,`left`,`right`
+vertical | `string` | `middle` | 组件的竖直位置。有3个预置选项: `middle`,`top`,`bottom`
+duration | `number` | 2000 | 组件显示时间，单位毫秒
+mode | `string` | `override` | 多个组件连续弹出显示模式。内置的模式有: `override`,`queue`,`layout`。`override`模式, 最后显示的toast会强制覆盖前面的。`queue`模式, toast排队显示，一个消失，才显示下一个。`layout`模式，toast会在竖直方向上排列，不覆盖
+transition | `string` | `fade` | toast组件显示和消失的过渡效果，预置的过渡有: `fade`
+zIndex | `number`  |  9999  |  组件的层级
+onClose | `function` |  | 组件关闭后的回调
 
 ### 6. 方法
 
 Name | Parameter | return Value | Description
 --------- | ---------- | -----------|-----------
-info | above |  | pop up message with black background
-success | above |  | pop up message with green background
-warning | above | | pop up message with yelllow background
-error | above |  | pop up message with red background
-close | id：toast's id | | close specificed toast
-closeAll |   |  | close all toast
+info | above |  | 默认的黑色背景弹出消息
+success | above |  | 绿色背景弹出成功消息
+warning | above | | 黄色背景弹出警告消息
+error | above |  | 红色背景弹出错误消息
+close | id：toast's id | | 关闭指定id的toast
+closeAll |   |  | 关闭所有的toast
