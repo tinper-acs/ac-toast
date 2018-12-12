@@ -5,7 +5,6 @@ import './index.scss';
 import '../icon/iconfont.css';
 import {assign} from '../common';
 
-//添加zIndex支持 TODO
 const propTypes = {
 	id: PropTypes.string,
 	className: PropTypes.string,
@@ -18,7 +17,6 @@ const propTypes = {
 	mode: PropTypes.string,
 	onClose: PropTypes.func,
 	seq: PropTypes.number,
-	//layout模式还会重叠
 	mode: PropTypes.oneOf(['override','queue','layout']),
 	autoClose: PropTypes.bool,
 	zIndex: PropTypes.number
@@ -49,12 +47,12 @@ class ToastItem extends Component {
 		const {duration,autoClose} = this.props;
 		if(autoClose){
 			const animateTime = 300 * 2;
-			setTimeout(() => {
+			this.closeTimer = setTimeout(() => {
 				this.close();
 			}, duration + animateTime);
 		}
 	}
-	componentWillMount(){
+	componentWillUnmount(){
 		//清除定时器
 		clearTimeout(this.closeTimer);
 		this.closeTimer = null;

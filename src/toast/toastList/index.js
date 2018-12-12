@@ -15,15 +15,20 @@ class ToastList extends Component{
 		this.toastNum = 0;
 		this.toasts = [];
 		this.queueTimer = null;
+		this.queueTimers = [];
 		this.removeToast = this.removeToast.bind(this);
 	}
-	componentWillMount(){
+	componentWillUnmount(){
 		//清除定时器
 		clearTimeout(this.queueTimer);
 		this.queueTimer = null;
+		this.queueTimers.forEach((item) => {
+			clearTimeout(item);
+		});
+		this.queueTimers.length = 0;
 	}
 	getUUID(){
-        return 't-' + new Date().getTime() + '-' + ++this.toastNum;
+        return 'toast-' + ++this.toastNum;
     }
 	add(props){
 		props.id = props.id || this.getUUID();
@@ -70,22 +75,28 @@ class ToastList extends Component{
 	consume(){
 		let duration = 0;
 		let queue = this.toasts;
+		let queueTimers = this.queueTimers;
 		let item;
 		const animateTime = 300;
+		//TODO 考虑使用async异步方式，用数组记录
 		while(item = queue.shift()){
-			setTimeout((item) => {
-				this.toasts = [item];
-				this.setState({
-					toasts: this.toasts
-				});
-			},duration,item)
+			queueTimers.push(
+				setTimeout((item) => {
+					this.toasts = [item];
+					this.setState({
+						toasts: this.toasts
+					});
+				},duration,item)
+			);
 			duration += item.props.children.props.duration + animateTime;
-			setTimeout((item) => {
-				this.toasts = [];
-				this.setState({
-					toasts: this.toasts
-				});
-			},duration,item)
+			queueTimers.push(
+				setTimeout((item) => {
+					this.toasts = [];
+					this.setState({
+						toasts: this.toasts
+					});
+				},duration,item)
+			);
 			duration += animateTime;
 		}
 	}
