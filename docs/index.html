@@ -58,62 +58,62 @@
 <tr>
 <td>id</td>
 <td><code>string</code></td>
-<td>a random string</td>
-<td>the toast&#39;s id</td>
+<td>随机字符串</td>
+<td>toast组件的id</td>
 </tr>
 <tr>
 <td>msg</td>
 <td><code>string</code></td>
 <td></td>
-<td>the message showed in toast</td>
+<td>组件中显示的文字</td>
 </tr>
 <tr>
 <td>className</td>
 <td><code>string</code></td>
 <td></td>
-<td>a custom class for toast</td>
+<td>组件顶层的class，用来自定义样式</td>
 </tr>
 <tr>
 <td>horizontal</td>
 <td><code>string</code></td>
 <td><code>center</code></td>
-<td>Position horizontal of toast. There are 3 pre-defined positions: <code>center</code>,<code>left</code>,<code>right</code></td>
+<td>组件的水平位置。有3个预置选项: <code>center</code>,<code>left</code>,<code>right</code></td>
 </tr>
 <tr>
 <td>vertical</td>
 <td><code>string</code></td>
 <td><code>middle</code></td>
-<td>Position vertical of toast. There are 3 pre-defined positions: <code>middle</code>,<code>top</code>,<code>bottom</code></td>
+<td>组件的竖直位置。有3个预置选项: <code>middle</code>,<code>top</code>,<code>bottom</code></td>
 </tr>
 <tr>
 <td>duration</td>
 <td><code>number</code></td>
 <td>2000</td>
-<td>how long time the toast show,unit is milliscond</td>
+<td>组件显示时间，单位毫秒</td>
 </tr>
 <tr>
 <td>mode</td>
 <td><code>string</code></td>
 <td><code>override</code></td>
-<td>Built-in modes: <code>override</code>,<code>queue</code>. If <code>override</code>, the last toast will forcibly flush previous. If <code>queue</code>, toast will show after last hide</td>
+<td>多个组件连续弹出显示模式。内置的模式有: <code>override</code>,<code>queue</code>,<code>layout</code>。<code>override</code>模式, 最后显示的toast会强制覆盖前面的。<code>queue</code>模式, toast排队显示，一个消失，才显示下一个。<code>layout</code>模式，toast会在竖直方向上排列，不覆盖</td>
 </tr>
 <tr>
 <td>transition</td>
 <td><code>string</code></td>
 <td><code>fade</code></td>
-<td>Built-in transitions: <code>fade</code></td>
+<td>toast组件显示和消失的过渡效果，预置的过渡有: <code>fade</code></td>
 </tr>
 <tr>
 <td>zIndex</td>
 <td><code>number</code></td>
 <td>9999</td>
-<td>toast container&#39;s z-index in css</td>
+<td>组件的层级</td>
 </tr>
 <tr>
 <td>onClose</td>
 <td><code>function</code></td>
 <td></td>
-<td>the callback function after toast hide</td>
+<td>组件关闭后的回调</td>
 </tr>
 </tbody>
 </table>
@@ -132,37 +132,37 @@
 <td>info</td>
 <td>above</td>
 <td></td>
-<td>pop up message with black background</td>
+<td>默认的黑色背景弹出消息</td>
 </tr>
 <tr>
 <td>success</td>
 <td>above</td>
 <td></td>
-<td>pop up message with green background</td>
+<td>绿色背景弹出成功消息</td>
 </tr>
 <tr>
 <td>warning</td>
 <td>above</td>
 <td></td>
-<td>pop up message with yelllow background</td>
+<td>黄色背景弹出警告消息</td>
 </tr>
 <tr>
 <td>error</td>
 <td>above</td>
 <td></td>
-<td>pop up message with red background</td>
+<td>红色背景弹出错误消息</td>
 </tr>
 <tr>
 <td>close</td>
 <td>id：toast&#39;s id</td>
 <td></td>
-<td>close specificed toast</td>
+<td>关闭指定id的toast</td>
 </tr>
 <tr>
 <td>closeAll</td>
 <td></td>
 <td></td>
-<td>close all toast</td>
+<td>关闭所有的toast</td>
 </tr>
 </tbody>
 </table>
